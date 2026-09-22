@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Compra confirmada — Operação 100 | StartSe</title>
+  <meta name="description" content="Sua inscrição na Operação 100 está confirmada. Veja os próximos passos.">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #001a45;
+      --ink: #07134d;
+      --text: #152846;
+      --muted: #43536a;
+      --blue: #0878d1;
+      --blue-dark: #0663ad;
+      --blue-soft: #eef7ff;
+      --line: #d9e3ee;
+      --bg: #f3f5f7;
+      --orange: #e96c18;
+      --orange-text: #d55c0e;
+      --orange-soft: #fff4eb;
+      --orange-line: #f2b17b;
+      --green: #12a150;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, Arial, Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    .topbar {
+      background: var(--navy);
+      padding: 22px 16px;
+      text-align: center;
+    }
+    .logo {
+      font-size: 30px;
+      font-weight: 700;
+      letter-spacing: -1.5px;
+      color: #fff;
+      text-decoration: none;
+    }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 32px 16px 48px;
+    }
+    .shell {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 8px 28px rgba(0, 26, 69, .10);
+      overflow: hidden;
+    }
+    .hero {
+      text-align: center;
+      padding: 44px 48px 24px;
+    }
+    .check {
+      width: 72px; height: 72px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      background: var(--green);
+      display: grid; place-items: center;
+      box-shadow: 0 0 0 10px rgba(18, 161, 80, .12);
+      animation: pop .5s cubic-bezier(.2, 1.4, .4, 1) both;
+    }
+    .check svg { width: 36px; height: 36px; }
+    .tag {
+      display: inline-block;
+      margin: 0 0 14px;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: var(--blue-soft);
+      color: var(--blue);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0 0 12px;
+      font-size: 48px;
+      line-height: 1.08;
+      font-weight: 800;
+      letter-spacing: -2px;
+      color: var(--navy);
+    }
+    .lead {
+      margin: 0 0 12px;
+      font-size: 22px;
+      line-height: 1.4;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .hero p.sub {
+      margin: 0 auto;
+      max-width: 540px;
+      font-size: 18px;
+      line-height: 1.55;
+      color: #253854;
+    }
+    .sections { padding: 8px 32px 8px; display: grid; gap: 16px; }
+    .card {
+      border-radius: 14px;
+      padding: 28px;
+    }
+    .card.soft { background: var(--blue-soft); }
+    .card.outline { border: 1px solid var(--line); }
+    .card.email {
+      background: var(--navy);
+      color: #fff;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+    }
+    .card.email .icon {
+      flex: none;
+      width: 56px; height: 56px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, .12);
+      display: grid; place-items: center;
+    }
+    .card.email .icon svg { width: 28px; height: 28px; }
+    .card.email h2 { color: #fff; }
+    .card.email p { color: #d6e2f5; }
+    .card.email strong { color: #fff; }
+    .step { display: flex; gap: 20px; align-items: flex-start; }
+    .num {
+      flex: none;
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: var(--blue);
+      color: #fff;
+      font-size: 28px;
+      font-weight: 700;
+      display: grid; place-items: center;
+    }
+    h2 {
+      margin: 6px 0 12px;
+      font-size: 26px;
+      line-height: 1.25;
+      letter-spacing: -.5px;
+      color: var(--ink);
+    }
+    .card p {
+      margin: 0 0 12px;
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .card p:last-child { margin-bottom: 0; }
+    .note { font-size: 14px !important; color: var(--muted); }
+    .btn {
+      display: block;
+      margin-top: 20px;
+      padding: 17px 24px;
+      border-radius: 10px;
+      background: var(--blue);
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: 700;
+      transition: background .15s ease, transform .15s ease;
+    }
+    .btn:hover { background: var(--blue-dark); transform: translateY(-1px); }
+    .btn:focus-visible { outline: 3px solid #9fd0ff; outline-offset: 2px; }
+    .alert {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 18px 20px;
+      border-radius: 12px;
+      background: var(--orange-soft);
+      border: 1px solid var(--orange-line);
+      font-size: 18px;
+      line-height: 1.45;
+      color: #2c2d31;
+    }
+    .alert .bang {
+      flex: none;
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: var(--orange);
+      color: #fff;
+      font-size: 24px;
+      font-weight: 700;
+      display: grid; place-items: center;
+    }
+    .alert strong { color: var(--orange-text); }
+    .signoff { padding: 24px 32px 32px; }
+    .signoff p { margin: 0 0 10px; font-size: 17px; line-height: 1.55; }
+    .signoff p:last-child { margin: 0; }
+    footer {
+      border-top: 1px solid #dce3eb;
+      background: #fafbfc;
+      padding: 22px 24px 26px;
+      text-align: center;
+      color: #73839a;
+      font-size: 12px;
+      line-height: 1.6;
+    }
+    footer p { margin: 0; }
+    @keyframes pop { from { transform: scale(.4); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) { .check { animation: none; } .btn { transition: none; } }
+    @media (max-width: 640px) {
+      main { padding: 16px 12px 32px; }
+      .hero { padding: 36px 20px 20px; }
+      h1 { font-size: 38px; letter-spacing: -1.5px; }
+      .lead { font-size: 20px; }
+      .hero p.sub { font-size: 17px; }
+      .sections { padding: 8px 16px; }
+      .card { padding: 22px 18px; }
+      .card.email, .step { gap: 14px; }
+      .num { width: 44px; height: 44px; font-size: 22px; }
+      .card.email .icon { width: 44px; height: 44px; border-radius: 12px; }
+      h2 { font-size: 22px; margin-top: 4px; }
+      .signoff { padding: 20px 20px 28px; }
+      .alert { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="https://www.startse.com" aria-label="StartSe">.StartSe&nbsp;❯</a>
+  </header>
+
+  <main>
+    <div class="shell">
+      <section class="hero">
+        <div class="check" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>
+        </div>
+        <span class="tag">Compra confirmada</span>
+        <h1>Obrigado!</h1>
+        <p class="lead">Que bom ter você com a gente na Operação 100. 🚀</p>
+        <p class="sub">A partir de agora, você terá 100 dias para transformar oportunidades de inteligência artificial em ações práticas na sua empresa.</p>
+      </section>
+
+      <div class="sections">
+        <div class="card email">
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          </div>
+          <div>
+            <h2>Seus acessos chegam por e-mail</h2>
+            <p>Nos próximos minutos você vai receber, no e-mail usado na compra, <strong>todos os seus acessos</strong> e o link para ativar as licenças do seu time.</p>
+            <p>Não encontrou? Confira as pastas de spam e promoções.</p>
+          </div>
+        </div>
+
+        <div class="card soft">
+          <div class="step">
+            <div class="num">1</div>
+            <div>
+              <h2>Preencha o Plano de Ataque</h2>
+              <p>Até <strong>01/10</strong>, acesse o <strong>AI Action</strong> e registre os principais desafios e oportunidades que você pretende atacar nos próximos 100 dias.</p>
+              <p>Leva cerca de 5 minutos. Use seu mesmo e-mail e senha da StartSe.</p>
+              <a class="btn" href="https://ai-action.startse.com/" target="_blank" rel="noopener">Preencher meu Plano de Ataque&nbsp;&nbsp;→</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="card outline">
+          <div class="step">
+            <div class="num">2</div>
+            <div>
+              <h2>Prepare seu time</h2>
+              <p>Sua empresa conta com <strong>10 licenças do AI First</strong>, nosso curso de literacia em IA e ferramentas para uso corporativo.</p>
+              <p>Convide as pessoas do seu time que precisam entender, escolher e aplicar IA no dia a dia.</p>
+              <p class="note">O link para ativar as 10 licenças vai no e-mail de acesso, com o cupom já aplicado. Você só precisa cadastrar os participantes.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card soft">
+          <h2 style="margin-top:0">O que acontece depois de 01/10?</h2>
+          <p>Sua inscrição inclui <strong>5 acessos ao AI Action</strong>. A partir de 01/10, você poderá convidar sócios ou lideranças para participar da jornada.</p>
+          <p>Cada participante terá sua própria trilha e mentoria.</p>
+        </div>
+
+        <div class="alert">
+          <div class="bang" aria-hidden="true">!</div>
+          <div><strong>Até 01/10:</strong> preencha o Plano de Ataque.</div>
+        </div>
+      </div>
+
+      <div class="signoff">
+        <p>Agora é hora de transformar IA em ação.</p>
+        <p>Equipe StartSe</p>
+      </div>
+
+      <footer>
+        <p>STARTSE INFORMACOES E SISTEMAS S/A<br>CNPJ: 24.554.736/0001-70<br>© 2026 Startse.com. Todos os direitos reservados.</p>
+      </footer>
+    </div>
+  </main>
+</body>
+</html>
